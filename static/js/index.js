@@ -74,7 +74,7 @@ function Activar(){
 		texto.innerText=" Apagar ";
         animacion.src="/static/images/reg1.gif";
         message = new Paho.MQTT.Message("1,"+texHora);
-        message.destinationName = "iatorres@hotmail/test";
+        message.destinationName = "iatorres@hotmail/test1";
         client.send(message);
     }
     else
@@ -82,13 +82,13 @@ function Activar(){
 		texto.innerText='Encender';
         animacion.src="/static/images/reg.png"
         message = new Paho.MQTT.Message("0,"+texHora);
-        message.destinationName = "iatorres@hotmail/test";
+        message.destinationName = "iatorres@hotmail/test1";
         client.send(message);
 	}
 }
 function enviarH(){
     message = new Paho.MQTT.Message("0,"+texHora);
-	message.destinationName = "iatorres@hotmail/test";
+	message.destinationName = "iatorres@hotmail/test1";
 	client.send(message);
 }
 
